@@ -1,6 +1,11 @@
-import { ApolloServer, gql } from "apollo-server";
+import { ApolloServer, gql } from "apollo-server"; //package.json에서    "type": "module" 를 추가해야지만 import 사용가능
 
-const typeDefs = gql``;
+const typeDefs = gql`
+  type Query {
+    text: String
+    hello: String
+  }
+`;
 
 const server = new ApolloServer({ typeDefs });
 
