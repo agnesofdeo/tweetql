@@ -8,7 +8,7 @@ const typeDefs = gql`
     lastName: String
   }
   type Tweet {
-    id: ID
+    id: ID!
     text: String!
     author: User!
   }
@@ -18,7 +18,7 @@ const typeDefs = gql`
   }
   type Mutation {
     postTweet(text: String!, userId: ID!): Tweet!
-    deleteTweet(id: ID!): Boolean
+    deleteTweet(id: ID!): Boolean!
   }
 `;
 
