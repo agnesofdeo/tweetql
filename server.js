@@ -26,6 +26,9 @@ const typeDefs = gql`
     username: String!
     firstName: String!
     lastName: String!
+    """
+    Is the sum of firstName + lastName as a string
+    """
     fullName: String!
   }
   type Tweet {
@@ -40,6 +43,9 @@ const typeDefs = gql`
   }
   type Mutation {
     postTweet(text: String!, userId: ID!): Tweet!
+    """
+    Deletes a Twwt if found, else returns false
+    """
     deleteTweet(id: ID!): Boolean!
   }
 `;
